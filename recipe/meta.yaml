@@ -1,45 +1,72 @@
-{% set name = "<PLEASE ADD PKG NAME>" %}
-{% set version = "<PLEASE ADD PKG VERSION>" %}
+{% set name = "xorg-libxfont2" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: <sha256>
+  url: https://gitlab.freedesktop.org/xorg/lib/libxfont/-/archive/libXfont2-{{ version }}/libxfont-libXfont2-{{ version }}.tar.gz
+  sha256: 37979d32c9b59e33165347eb8f428951796e5ab94006c86edf2c0c9db06d2a0a
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: True  # [py<38]
 
 requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - pkg-config
+    - automake
+    - autoconf
+    - libtool
+    - make
+    - xorg-util-macros
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
+    - freetype
+    - fontconfig
+    - zlib
   host:
-    - python
-    - pip
+    - freetype
+    - fontconfig
+    - zlib
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
   run:
-    - python
+    - freetype
+    - fontconfig
+    - zlib
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
 
 test:
-  imports:
-    - {{ name.replace('-', '.') }}
   requires:
-    - pip
+    - pkg-config
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
   commands:
-    - pip check
+    - test -f $PREFIX/lib/libXfont2.dylib  # [osx]
+    - test -f $PREFIX/lib/libXfont2.so     # [linux]
+    - pkg-config --exists xfont2
 
 about:
-  home: <PLEASE ADD HOME URL>
-  summary: <PLEASE ADD SUMMARY>
+  home: https://gitlab.freedesktop.org/xorg/lib/libxfont
+  summary: X font file parsing and rasterizing library used by the X server
   description: |
-    <PLEASE ADD DESCRIPTION>
-  license: <PLEASE ADD LICENSE>
-  license_family: <PLEASE ADD LICENSE_FAMILY>
-  license_file: <PLEASE_ADD_LICENSE_FILE>
-  dev_url: <PLEASE ADD DEV URL>
-  doc_url: <PLEASE ADD DOC URL>
+    libXfont2 provides the core of the legacy X11 font system, handling
+    font file parsing and rendering for the X server and Xvfb.
+  license: MIT
+  license_family: MIT
+  license_file: COPYING
+  dev_url: https://gitlab.freedesktop.org/xorg/lib/libxfont
+  doc_url: https://www.x.org/wiki/Documentation/
 
 extra:
   recipe-maintainers:
+    - elundby
     - Jrice1317
