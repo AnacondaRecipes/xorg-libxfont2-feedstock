@@ -23,12 +23,6 @@ requirements:
     - libtool
     - make
     - xorg-util-macros
-    - xorg-xorgproto
-    - xorg-xtrans
-    - xorg-libfontenc
-    - freetype
-    - fontconfig
-    - zlib
   host:
     - freetype
     - fontconfig
@@ -47,9 +41,6 @@ requirements:
 test:
   requires:
     - pkg-config
-    - xorg-xorgproto
-    - xorg-xtrans
-    - xorg-libfontenc
   commands:
     - test -f $PREFIX/lib/libXfont2.dylib  # [osx]
     - test -f $PREFIX/lib/libXfont2.so     # [linux]
