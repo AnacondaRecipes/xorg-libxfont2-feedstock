@@ -1,13 +1,13 @@
-About <pkg_name>-feedstock
+About xorg-libxfont2-feedstock
 =======================
 
 Feedstock license: [BSD-3-Clause](LICENSE)
 
-Home: <home_url>
+Home: https://gitlab.freedesktop.org/xorg/lib/libxfont
 
-Package license: <pkg_license>
+Package license: [MIT](https://gitlab.freedesktop.org/xorg/lib/libxfont/-/blob/master/COPYING)
 
-Summary: <pkg_summary>
+Summary: X font file parsing and rasterizing library used by the X server
 
 
 Current release info
@@ -15,19 +15,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-<pkg_name>-green.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Downloads](https://img.shields.io/conda/dn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Version](https://img.shields.io/conda/vn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) | [![Conda Platforms](https://img.shields.io/conda/pn/anaconda/<pkg_name>.svg)](https://anaconda.org/anaconda/<pkg_name>) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-xorg-libxfont2-green.svg)](https://anaconda.org/anaconda/xorg-libxfont2) | [![Conda Downloads](https://img.shields.io/conda/dn/anaconda/xorg-libxfont2.svg)](https://anaconda.org/anaconda/xorg-libxfont2) | [![Conda Version](https://img.shields.io/conda/vn/anaconda/xorg-libxfont2.svg)](https://anaconda.org/anaconda/xorg-libxfont2) | [![Conda Platforms](https://img.shields.io/conda/pn/anaconda/xorg-libxfont2.svg)](https://anaconda.org/anaconda/xorg-libxfont2) |
 
-Installing <pkg_name>
+Installing xorg-libxfont2
 ==================
 
-Installing `<pkg_name>` from the main channel can be achieved by:
+Installing `xorg-libxfont2` from the main channel can be achieved by:
 
 ```
-conda install <pkg_name>
+conda install xorg-libxfont2
 ```
 
-It is possible to list all of the versions of `<pkg_name>` available on your platform with `conda`:
+It is possible to list all of the versions of `xorg-libxfont2` available on your platform with `conda`:
 
 ```
-conda search <pkg_name>
+conda search xorg-libxfont2
 ```
