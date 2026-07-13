@@ -1,8 +1,7 @@
 #!/bin/bash
 set -ex
 
-autoreconf -fiv
-./configure --prefix=$PREFIX
+./configure --prefix=$PREFIX --disable-static
 make -j${CPU_COUNT}
 make check
 make install
