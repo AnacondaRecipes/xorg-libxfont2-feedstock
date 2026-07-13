@@ -23,6 +23,8 @@ requirements:
     - libtool
     - make
     - xorg-util-macros
+    # python used for running the tests
+    - python
   host:
     - freetype {{ freetype }}
     - zlib {{ zlib }}
