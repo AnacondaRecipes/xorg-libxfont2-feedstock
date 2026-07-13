@@ -1,13 +1,13 @@
 {% set name = "xorg-libxfont2" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.freedesktop.org/xorg/lib/libxfont/-/archive/libXfont2-{{ version }}/libxfont-libXfont2-{{ version }}.tar.gz
-  sha256: 37979d32c9b59e33165347eb8f428951796e5ab94006c86edf2c0c9db06d2a0a
+  url: https://www.x.org/releases/individual/lib/libXfont2-{{ version }}.tar.gz
+  sha256: a53d621b6ceb1dcbd05a0b9bd7f13c34efa40401cd5c05af904035c567a30f18
 
 build:
   number: 0

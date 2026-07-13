@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-./autogen.sh
+autoreconf -fiv
 ./configure --prefix=$PREFIX
-make
+make -j${CPU_COUNT}
 make install
