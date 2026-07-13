@@ -24,7 +24,7 @@ requirements:
     - make
     - xorg-util-macros
   host:
-    - freetype
+    - freetype {{ freetype }}
     - zlib {{ zlib }}
     - xorg-xorgproto
     - xorg-xtrans
