@@ -24,11 +24,11 @@ requirements:
     - make
     - xorg-util-macros
   host:
-    - freetype 2.13.3
+    - freetype
     - zlib {{ zlib }}
-    - xorg-xorgproto 2024.1
-    - xorg-xtrans 1.6.0
-    - xorg-libfontenc 1.1.8
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
   run:
     - freetype
     - zlib
