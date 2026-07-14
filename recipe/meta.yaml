@@ -1,13 +1,13 @@
 {% set name = "xorg-libxfont2" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.freedesktop.org/xorg/lib/libxfont/-/archive/libXfont2-{{ version }}/libxfont-libXfont2-{{ version }}.tar.gz
-  sha256: 37979d32c9b59e33165347eb8f428951796e5ab94006c86edf2c0c9db06d2a0a
+  url: https://www.x.org/releases/individual/lib/libXfont2-{{ version }}.tar.gz
+  sha256: a53d621b6ceb1dcbd05a0b9bd7f13c34efa40401cd5c05af904035c567a30f18
 
 build:
   number: 0
@@ -23,16 +23,16 @@ requirements:
     - libtool
     - make
     - xorg-util-macros
+    # python used for running the tests
+    - python
   host:
-    - freetype 2.13.3
-    - fontconfig 2.15.0
+    - freetype {{ freetype }}
     - zlib {{ zlib }}
-    - xorg-xorgproto 2024.1
-    - xorg-xtrans 1.6.0
-    - xorg-libfontenc 1.1.8
+    - xorg-xorgproto
+    - xorg-xtrans
+    - xorg-libfontenc
   run:
     - freetype
-    - fontconfig
     - zlib
     - xorg-xorgproto
     - xorg-xtrans
