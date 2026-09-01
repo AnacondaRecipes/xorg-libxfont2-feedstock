@@ -48,7 +48,7 @@ test:
 
 about:
   home: https://gitlab.freedesktop.org/xorg/lib/libxfont
-  summary: X font file parsing and rasterizing library used by the X server
+  summary: X font file parsing and rasterizing library used by the X server.
   description: |
     libXfont2 provides the core of the legacy X11 font system, handling
     font file parsing and rendering for the X server and Xvfb.
