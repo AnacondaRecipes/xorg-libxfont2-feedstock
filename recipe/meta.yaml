@@ -10,7 +10,7 @@ source:
   sha256: 8564b4df365bc5a6cb0c15900dc688f6e8f47b00a8571c6708c916dfb85066ba
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -28,9 +28,9 @@ requirements:
   host:
     - freetype {{ freetype }}
     - zlib {{ zlib }}
-    - xorg-xorgproto
-    - xorg-xtrans
-    - xorg-libfontenc
+    - xorg-xorgproto {{ xorg_xorgproto }}
+    - xorg-xtrans ==1.6.0
+    - xorg-libfontenc ==1.1.8
   run:
     - freetype
     - zlib
@@ -48,7 +48,7 @@ test:
 
 about:
   home: https://gitlab.freedesktop.org/xorg/lib/libxfont
-  summary: X font file parsing and rasterizing library used by the X server
+  summary: X font file parsing and rasterizing library used by the X server.
   description: |
     libXfont2 provides the core of the legacy X11 font system, handling
     font file parsing and rendering for the X server and Xvfb.
